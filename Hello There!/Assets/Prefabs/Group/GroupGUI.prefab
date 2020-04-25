@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39.44, y: 77.96}
+  m_AnchoredPosition: {x: -39.440006, y: 77.96}
   m_SizeDelta: {x: 57.12, y: 11.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6827443202418298243
@@ -78,9 +78,9 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -174,9 +174,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   update: 0
-  GroupDetail: {fileID: 6853779067151155998, guid: 419daa3b39671cc46b63315166dd8d50,
-    type: 3}
-  Group: {fileID: 7358339815699997852, guid: 58a1a8e8eea510a47a830915be0e07c6, type: 3}
   information: {fileID: 6827443202418298240}
 --- !u!114 &6827443202418298242
 MonoBehaviour:
