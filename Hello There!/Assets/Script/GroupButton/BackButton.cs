@@ -19,6 +19,7 @@ public class BackButton : MonoBehaviour
     }
 
     public void returnGroupPanel(){
+        //PlayerPrefs.SetString("active", "nothing");
         this.curPanel.SetActive(true);
         this.GroupPanel.SetActive(false);
     }

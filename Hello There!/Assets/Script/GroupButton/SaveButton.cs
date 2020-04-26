@@ -9,11 +9,11 @@ public class SaveButton : MonoBehaviour
     generate new random ID and put stuff inside
     */
     // Start is called before the first frame update
-    public TextMeshProUGUI  Contact, GroupName;
+
+    public TextMeshProUGUI  newContact, newGroupName;
     void Start()
     {
-        Contact = GetComponent<TextMeshProUGUI>();
-        GroupName = GetComponent<TextMeshProUGUI>();
+
     }
 
     // Update is called once per frame
@@ -22,19 +22,21 @@ public class SaveButton : MonoBehaviour
         
     }
     private void OnEnable() {
-        Contact = GetComponent<TextMeshProUGUI>();
-        GroupName = GetComponent<TextMeshProUGUI>();
+
     }
 
-    public void submit(){
-        if(Contact != null && GroupName != null){
-            string information = Contact.text + " " + GroupName.text;
+    public void submit(){//add to Group controller Dictionaries
+        if(newContact != null && newGroupName != null){
+            string information = newContact.text + " " + newGroupName.text;
             string ID = PlayerPrefs.GetString("active");
             if(ID == "create new"){
-                string randomID = "generate random ID here";
-                PlayerPrefs.SetString(randomID, information);
+                string randomID = System.Guid.NewGuid().ToString();
+                string newID = PlayerPrefs.GetString("ID_List") + " " + randomID;
+                PlayerPrefs.SetString("ID_List", newID); // first time open app
+                PlayerPrefs.SetString(randomID, information); // new information
+                PlayerPrefs.SetString("active", randomID);
             } else {
-                PlayerPrefs.SetString(ID, information);
+                PlayerPrefs.SetString(ID, information); // replace old information
             }
             Debug.Log(information);
         }

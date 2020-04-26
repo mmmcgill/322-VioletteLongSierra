@@ -7,7 +7,6 @@ public class OpenGroupInfoOpener : MonoBehaviour
 {
     /*Variable explanation: ( might be outdate)
     - GroupPanel: toggling between GroupInfo and GroupPanel
-    - rInformation: JSON format that will be sent to take Exist ( Contact, groupName)
     - ID: key of the file inside each group char 
     - Update, check if change file is to update or create new, might move this to Group edit component instead
     */
@@ -15,7 +14,6 @@ public class OpenGroupInfoOpener : MonoBehaviour
     public TextMeshProUGUI information; 
     private GameObject[] GroupPanel;
     private GroupContainer toggle;
-    private string rInformation;
     private string ID;
     // Start is called before the first frame update
     void Start()
