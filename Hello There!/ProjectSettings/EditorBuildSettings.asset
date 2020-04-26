@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/IndividualCardScenes/Individual_Card.unity
+    guid: d30834cb9a7e64ba7bda24b50cfbe292
+  - enabled: 1
+    path: Assets/Scenes/IndividualCardScenes/Tasks.unity
+    guid: 9e115ccba10ad45ce8be79ca8a7c2f26
+  - enabled: 1
+    path: Assets/Scenes/IndividualCardScenes/Calendar.unity
+    guid: 1ba3b7483ec6f416383f6b8cf074e0e6
   m_configObjects: {}
