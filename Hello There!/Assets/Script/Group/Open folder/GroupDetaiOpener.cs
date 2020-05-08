@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 
@@ -10,21 +11,28 @@ public class GroupDetaiOpener : MonoBehaviour
     - Contact, groupName: place for user to edit text
     - variable active -> check if panel open from add button or card
     */
-    public TextMeshProUGUI contact, groupName;
+    public GameObject Canvas, contact, groupName;
+    private TMP_InputField Contact, GroupName;
+    private GroupInformationcontrol controller;
 
     private string ID;
     
     void Start()
     { 
-        Debug.Log("start");
+        controller = Canvas.GetComponent<GroupInformationcontrol>();
+        //Debug.Log("start");
     }
 
     private void OnEnable()
     {
-        ID = PlayerPrefs.GetString("active");
+        Contact = contact.GetComponent<TMP_InputField>();
+        GroupName = groupName.GetComponent<TMP_InputField>();
+        controller = Canvas.GetComponent<GroupInformationcontrol>();
+        ID = controller.getActive();
+        Debug.Log(ID);
         if(ID == "create new"){
+            Debug.Log("yes");
             renderNewInformation();
-            
         } else {
             renderInformation(ID);
         }
@@ -36,22 +44,13 @@ public class GroupDetaiOpener : MonoBehaviour
         
     }
 
-    public void renderInformation(string ID){// get exist information if click from previous ID
-        string getInfo = PlayerPrefs.GetString(ID);
-        string[] info = getInfo.Split(' ');
-        Debug.Log(info.Length);
-        if(contact!= null && groupName != null){
-            contact.SetText(info[1]);
-            groupName.SetText(info[0]);
-        }
-        Debug.Log(getInfo);
+    public void renderInformation(string group){// get exist information if click from previous ID
+        Debug.Log("yes");
+        GroupName.text = group;
     }
 
 
     public void renderNewInformation(){ // create new information if click from create new 
-        if(contact!= null && groupName != null){
-            contact.SetText("placebo will be fill out later");
-            groupName.SetText("placebo will be fill out laer");
-        }
+        Debug.Log("execute");
     }
 }

@@ -8,25 +8,30 @@ public class GroupContainer : MonoBehaviour
     - GroupPrefabs: GroupUI like games, sport
     - GroupPanel: Parents component + setActive go here
     - GroupDetail: toggle groupDetail with existing information
+    - Canvas: where information is stored.
     */
 
-    public GameObject groupPrefabs, GroupPanel, GroupDetail;
-    private List<string> IdList;
+    public GameObject groupPrefabs, GroupPanel, GroupDetail, Canvas;
+    private Dictionary<string, List<string>> group;
+    private GroupInformationcontrol controller;
     // Start is called before the first frame update
     //TODO: check if need to delete component by keeping tabs
     private void Start()
     {
         PlayerPrefs.DeleteAll();
         // this is to render existing group
-        IdList = new List<string>();
+        controller = Canvas.GetComponent<GroupInformationcontrol>();
+        group = controller.GetGroupMap();
         Transform master = GroupPanel.GetComponent<Transform>();
-        string[] ID_List = PlayerPrefs.GetString("ID_List").Split(' ');
-        for(int i = 0; i< ID_List.Length; i++){
-            Instant(ID_List[i], i, master);
+        int i = 0;
+        //Debug.Log(group);
+        foreach(string x in group.Keys){
+            Instant(x, i, master);
+            i++;
         }
     }
 
-    private void OnEnable() {
+    /*private void OnEnable() {
         string action = PlayerPrefs.GetString("active");
         switch(action){
             case "nothing":
@@ -36,7 +41,7 @@ public class GroupContainer : MonoBehaviour
                 Instant(action, IdList.Count - 1, GroupPanel.GetComponent<Transform>());
                 break;
         }
-    }
+    }*/
     // Update is called once per frame
     void Update()
     {
@@ -49,11 +54,11 @@ public class GroupContainer : MonoBehaviour
     }
 
     public void Instant(string Id, int position, Transform master){
-        IdList.Add(Id);
-        //temp fix position, will be doing overflow later
-        GameObject placebo = Instantiate(groupPrefabs, new Vector3(master.position.x, (master.position.y + 90 ) - 30 * position, 0), Quaternion.identity); // scaling 
+
+        GameObject placebo = Instantiate(groupPrefabs, new Vector3(master.position.x + 40, (master.position.y + 90 ) - 50 * position, 0), Quaternion.identity); // scaling 
         OpenGroupInfoOpener script = placebo.GetComponent<OpenGroupInfoOpener>(); 
         script.setText(Id);
+        script.SetController(controller);
         placebo.transform.SetParent(GroupPanel.transform);
     }
 }
