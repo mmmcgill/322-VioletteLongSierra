@@ -12,12 +12,17 @@ public class OpenGroupInfoOpener : MonoBehaviour
     */
     public bool update; 
     public TextMeshProUGUI information; 
+    public GameObject Canvas;
     private GameObject[] GroupPanel;
     private GroupContainer toggle;
-    private string ID;
+    private GroupInformationcontrol controller;
+    private string group;
     // Start is called before the first frame update
     void Start()
     {
+        if(Canvas != null){
+            controller = Canvas.GetComponent<GroupInformationcontrol>();
+        }
         information = GetComponent<TextMeshProUGUI>();
         GroupPanel = GameObject.FindGameObjectsWithTag("GroupPanel");
         toggle = GroupPanel[0].GetComponent<GroupContainer>();
@@ -31,22 +36,24 @@ public class OpenGroupInfoOpener : MonoBehaviour
 
     public void createNew(){
         //render new info panel if addNew is true;
-        PlayerPrefs.SetString("active", "create new");
+        controller.SetNewActive();
         toggle.GroupDetailToggle();
     }
 
     public void takeExist(){
-
-        PlayerPrefs.SetString("active", this.ID);
+        controller.SetActiveId(this.group);
         toggle.GroupDetailToggle();
         //render existing info panel if addNew is false;
     }
 
-    public void setText(string ID){//call at the start of program to render information
-        information.SetText(PlayerPrefs.GetString(ID));
-        this.ID = ID;
+    public void setText(string group){//call at the start of program to render information
+        information.SetText(group);
+        this.group = group;
     }
 
+    public void SetController(GroupInformationcontrol controller){
+        this.controller = controller;
+    }
     public void test(){
         Debug.Log("test succeed");
     }
