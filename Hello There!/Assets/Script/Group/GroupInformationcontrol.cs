@@ -11,8 +11,14 @@ public class GroupInformationcontrol : MonoBehaviour
     //active determine which group is being open
     private string active = "create new";
     // Start is called before the first frame update
+    //path to file contains Group information
     private string path = @"Assets/Script/Information text file/temp/Information.txt";
     private string path2 = @"Assets/Script/Information text file/temp2/Information.txt";
+
+    //path to file contains Individual infomation
+    private string pathIndividual = @"Assets/Script/Information text file/temp/Individual.txt";
+
+
     void Start()
     {
         if(!File.Exists(path2)){
@@ -30,10 +36,10 @@ public class GroupInformationcontrol : MonoBehaviour
                 List<string> IdContain = new List<string>();                
                 for(int i = 1; i< IdPlacebo.Length; i++) IdContain.Add(IdPlacebo[i]);
                 group.Add(IdPlacebo[0], IdContain);
-
             }
             file.Close();
         }
+        Debug.Log("read finish");
     }
 
     private void OnApplicationQuit() {
@@ -59,7 +65,8 @@ public class GroupInformationcontrol : MonoBehaviour
     }
 
     public Dictionary<string, List<string>> GetGroupMap(){ // return the whole map of group
-        return group;
+        Debug.Log(this.group);
+        return this.group;
     }
 
     public List<string> GetGroup(string id){ //return group information by id

@@ -45,12 +45,10 @@ public class GroupDetaiOpener : MonoBehaviour
     }
 
     public void renderInformation(string group){// get exist information if click from previous ID
-        Debug.Log("yes");
         GroupName.text = group;
     }
 
 
     public void renderNewInformation(){ // create new information if click from create new 
-        Debug.Log("execute");
     }
 }

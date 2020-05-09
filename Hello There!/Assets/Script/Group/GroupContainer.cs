@@ -11,23 +11,28 @@ public class GroupContainer : MonoBehaviour
     - Canvas: where information is stored.
     */
 
-    public GameObject groupPrefabs, GroupPanel, GroupDetail, Canvas;
+    public GameObject groupPrefabs, GroupPanel, GroupDetail, Canvas, Group;
+    private List<GameObject> groupObject;
     private Dictionary<string, List<string>> group;
     private GroupInformationcontrol controller;
+    private Transform master;
+    private int index;
     // Start is called before the first frame update
     //TODO: check if need to delete component by keeping tabs
     private void Start()
     {
-        PlayerPrefs.DeleteAll();
         // this is to render existing group
         controller = Canvas.GetComponent<GroupInformationcontrol>();
         group = controller.GetGroupMap();
-        Transform master = GroupPanel.GetComponent<Transform>();
-        int i = 0;
+        groupObject = new List<GameObject>();
+        master = GroupPanel.GetComponent<Transform>();
+        index = 0;
+        Debug.Log(group);
         //Debug.Log(group);
         foreach(string x in group.Keys){
-            Instant(x, i, master);
-            i++;
+            Debug.Log(x);
+            Instant(x);
+            index++;
         }
     }
 
@@ -49,17 +54,28 @@ public class GroupContainer : MonoBehaviour
     }
 
     public void GroupDetailToggle(){
-        GroupPanel.SetActive(false);
+        Group.SetActive(false);
         GroupDetail.SetActive(true);
     }
 
-    public void Instant(string Id, int position, Transform master){
+    public void Instant(string group){
 
-        GameObject placebo = Instantiate(groupPrefabs, new Vector3(master.position.x + 40, (master.position.y + 90 ) - 50 * position, 0), Quaternion.identity); // scaling 
+        GameObject placebo = Instantiate(groupPrefabs, new Vector3(master.position.x + 120, master.position.y - 30 - 50 * index, 0), Quaternion.identity); // scaling 
         OpenGroupInfoOpener script = placebo.GetComponent<OpenGroupInfoOpener>(); 
-        script.setText(Id);
+        script.setText(group);
         script.SetController(controller);
         placebo.transform.SetParent(GroupPanel.transform);
+        groupObject.Add(placebo);
+    }
+
+
+//testing method
+    public void addObject(string group){
+        Instant(group);
+        index++;
+    }
+    public void removeObject(int index){
+        Destroy(groupObject[index]);
     }
 }
 
