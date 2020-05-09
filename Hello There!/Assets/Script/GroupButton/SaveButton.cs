@@ -9,11 +9,12 @@ public class SaveButton : MonoBehaviour
     generate new random ID and put stuff inside
     */
     // Start is called before the first frame update
-
+    public GameObject Canvas;
+    private GroupInformationcontrol controller;
     public TextMeshProUGUI  newContact, newGroupName;
     void Start()
     {
-
+        controller = Canvas.GetComponent<GroupInformationcontrol>();
     }
 
     // Update is called once per frame
@@ -25,20 +26,12 @@ public class SaveButton : MonoBehaviour
 
     }
 
-    public void submit(){//add to Group controller Dictionaries
-        if(newContact != null && newGroupName != null){
-            string information = newContact.text + " " + newGroupName.text;
-            string ID = PlayerPrefs.GetString("active");
-            if(ID == "create new"){
-                string randomID = System.Guid.NewGuid().ToString();
-                string newID = PlayerPrefs.GetString("ID_List") + " " + randomID;
-                PlayerPrefs.SetString("ID_List", newID); // first time open app
-                PlayerPrefs.SetString(randomID, information); // new information
-                PlayerPrefs.SetString("active", randomID);
-            } else {
-                PlayerPrefs.SetString(ID, information); // replace old information
-            }
-            Debug.Log(information);
-        }
+    public void submit(){
+        string id = controller.IdGenerator();
+        controller.SetGroup(newGroupName.text, id);
+        /*Dictionary<string, List<string>> temp = controller.GetGroupMap();
+        foreach(string x in temp.Keys){
+            Debug.Log(x);
+        }*/
     }
 }
