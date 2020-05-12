@@ -28,7 +28,7 @@ public class SaveButton : MonoBehaviour
 
     public void submit(){
         string id = controller.IdGenerator();
-        controller.SetGroup(newGroupName.text, id);
+       // controller.SetGroup(newGroupName.text, id);
         /*Dictionary<string, List<string>> temp = controller.GetGroupMap();
         foreach(string x in temp.Keys){
             Debug.Log(x);

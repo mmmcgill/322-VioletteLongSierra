@@ -64,28 +64,9 @@ public class GroupInformationcontrol : MonoBehaviour
         return individual;
     }
 
-    public Dictionary<string, List<string>> GetGroupMap(){ // return the whole map of group
-        Debug.Log(this.group);
-        return this.group;
-    }
-
-    public List<string> GetGroup(string id){ //return group information by id
-        return group[id];
-    }
 
     public string GetIndividual(string id){ // return individual information by id
         return individual[id];
-    }
-
-    public void SetGroup(string groupKey, string id ){ //set Group information by id ( replace string information with specific class later)
-        if(!group.ContainsKey(groupKey)) {
-            List<string> newGroup = new List<string>();
-            newGroup.Add(id);
-            group.Add(groupKey, newGroup);
-        }
-        else{ 
-            group[groupKey].Add(id);
-        }
     }
 
     public void SetIndividual(string id, string information){
@@ -95,9 +76,6 @@ public class GroupInformationcontrol : MonoBehaviour
         }
     }
 
-    public void DeleteGroup(string id){
-        group.Remove(id);
-    }
     public void DeleteIndividual(string id){
         individual.Remove(id);
     }

@@ -23,7 +23,7 @@ public class GroupContainer : MonoBehaviour
     {
         // this is to render existing group
         controller = Canvas.GetComponent<GroupInformationcontrol>();
-        group = controller.GetGroupMap();
+        //group = controller.GetGroupMap();
         groupObject = new List<GameObject>();
         master = GroupPanel.GetComponent<Transform>();
         index = 0;
