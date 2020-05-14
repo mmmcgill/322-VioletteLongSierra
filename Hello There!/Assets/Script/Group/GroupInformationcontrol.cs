@@ -24,18 +24,15 @@ public class GroupInformationcontrol : MonoBehaviour
         if(!File.Exists(path2)){
             using (FileStream fs = File.Create(path2));
         }
-        group = new Dictionary<string, List<string>>();
         individual = new Dictionary<string, string>();
-
+        char[] delimiter = {' '};
         //read the file and put into the dictionary
         using(StreamReader file = new StreamReader(path)){
             string ln;
             while((ln = file.ReadLine()) != null){
                 //tempStorage.Add(ln);
-                string[] IdPlacebo = ln.Split(' ');
-                List<string> IdContain = new List<string>();                
-                for(int i = 1; i< IdPlacebo.Length; i++) IdContain.Add(IdPlacebo[i]);
-                group.Add(IdPlacebo[0], IdContain);
+                string[] IdPlacebo = ln.Split(delimiter, 2);               
+                individual.Add(IdPlacebo[0], IdPlacebo[1]);
             }
             file.Close();
         }
@@ -44,11 +41,11 @@ public class GroupInformationcontrol : MonoBehaviour
 
     private void OnApplicationQuit() {
         using(StreamWriter writer = new StreamWriter(path2, true)){ //need on appliction close
-            foreach (string item in group.Keys)
-            {
-                string input = item +" ";
-                foreach(string x in group[item]) input += x + " ";
+            foreach (string item in individual.Keys)
+            {   
+                string input = item + " " + individual[item];
                 writer.WriteLine(input);
+                Debug.Log(input);
             }
             Debug.Log("write finish");
             writer.Close();
@@ -70,7 +67,7 @@ public class GroupInformationcontrol : MonoBehaviour
     }
 
     public void SetIndividual(string id, string information){
-        if(group.ContainsKey(id)) Debug.Log("has key");
+        if(individual.ContainsKey(id)) Debug.Log("has key");
         else {
             individual.Add(id, information);
         }
