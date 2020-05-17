@@ -12,8 +12,8 @@ public class GroupInformationcontrol : MonoBehaviour
     private string active = "create new";
     // Start is called before the first frame update
     //path to file contains Group information
-    private string path = @"Assets/Script/Information text file/temp/Information.txt";
-    private string path2 = @"Assets/Script/Information text file/temp2/Information.txt";
+    private string path = "Assets/Script/Information text file/temp/Information.txt";
+    private string path2 = "Assets/Script/Information text file/temp2/Information.txt";
 
     //path to file contains Individual infomation
     private string pathIndividual = @"Assets/Script/Information text file/temp/Individual.txt";
