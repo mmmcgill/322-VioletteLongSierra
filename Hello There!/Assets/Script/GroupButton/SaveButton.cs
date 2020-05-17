@@ -12,6 +12,8 @@ public class SaveButton : MonoBehaviour
     public GameObject Canvas;
     private GroupInformationcontrol controller;
     public TextMeshProUGUI  newContact, newGroupName;
+    public TextMeshProUGUI discord, interest, mobile;
+
     void Start()
     {
         controller = Canvas.GetComponent<GroupInformationcontrol>();
@@ -28,10 +30,22 @@ public class SaveButton : MonoBehaviour
 
     public void submit(){
         string id = controller.IdGenerator();
-       // controller.SetGroup(newGroupName.text, id);
+        // controller.SetGroup(newGroupName.text, id);
         /*Dictionary<string, List<string>> temp = controller.GetGroupMap();
         foreach(string x in temp.Keys){
             Debug.Log(x);
         }*/
+
+
+        Debug.Log(discord.text);
+        Debug.Log(interest.text);
+        Debug.Log(mobile.text);
+
+        string txtLine = discord.text + " " + interest.text + " " + mobile.text;
+        Debug.Log(txtLine);
+
+        controller.SetIndividual(id,txtLine);
+
+
     }
 }
