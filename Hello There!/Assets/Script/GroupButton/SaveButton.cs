@@ -11,9 +11,8 @@ public class SaveButton : MonoBehaviour
     // Start is called before the first frame update
     public GameObject Canvas;
     private GroupInformationcontrol controller;
-    public TextMeshProUGUI  discord,interest,mobile, reminder;
-    private Dictionary<string, string> individual;
-    //public Text input;
+    public TextMeshProUGUI  newContact, newGroupName;
+    public TextMeshProUGUI discord, interest, mobile;
 
     void Start()
     {
@@ -39,21 +38,16 @@ public class SaveButton : MonoBehaviour
             Debug.Log(x);
         }*/
 
+
         Debug.Log(discord.text);
         Debug.Log(interest.text);
         Debug.Log(mobile.text);
-        //Debug.Log(reminder.text);
 
-        string txtLine= discord.text +" "+ interest.text + " "+mobile.text +" " ;
+        string txtLine = discord.text + " " + interest.text + " " + mobile.text;
         Debug.Log(txtLine);
 
-        controller.SetIndividual(id, txtLine);
+        controller.SetIndividual(id,txtLine);
 
-        /*
-        foreach(string x in individual.Keys)
-        {
-            Debug.Log(x + " " + individual[x]);
-        }
-        */
+
     }
 }
