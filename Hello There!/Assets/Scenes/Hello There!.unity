@@ -1558,6 +1558,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5561407741269885695, guid: 35be6470ac8709147a4897644a38ee08,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.15002441
+      objectReference: {fileID: 0}
+    - target: {fileID: 5561407741269885695, guid: 35be6470ac8709147a4897644a38ee08,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6462397444118735803, guid: 35be6470ac8709147a4897644a38ee08,
         type: 3}
       propertyPath: m_Name
@@ -2286,6 +2296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Contact Info Page
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575659426712579903, guid: 5ef32bbaa34e1b643bf088496b8fbf9f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef32bbaa34e1b643bf088496b8fbf9f, type: 3}
@@ -5029,7 +5044,7 @@ PrefabInstance:
     - target: {fileID: 8453713687563716762, guid: e49f19a23a1568b4388c988fb9717de8,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8491811888151088676, guid: e49f19a23a1568b4388c988fb9717de8,
         type: 3}
