@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &12331007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1854773938, guid: 58a1a8e8eea510a47a830915be0e07c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 556577233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &99042932
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,6 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99042936}
   - component: {fileID: 99042935}
+  - component: {fileID: 99042937}
   - component: {fileID: 99042934}
   - component: {fileID: 99042933}
   - component: {fileID: 99042937}
@@ -250,6 +257,7 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 556577233}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &203705804
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,11 +371,15 @@ RectTransform:
   m_SizeDelta: {x: 710.1, y: 71.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &245553874
+=======
+--- !u!114 &116979047
+>>>>>>> SierraOne
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 245553872}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -409,6 +421,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+=======
+  m_GameObject: {fileID: 116979043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867d744d8e836bd4e946af0ed3f30ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Canvas: {fileID: 99042932}
+  Prefabs: {fileID: 9138253933966197286, guid: a82a952710e54044e84645a1b6c4fc5c, type: 3}
+  Parent: {fileID: 12331007}
+>>>>>>> SierraOne
 --- !u!1 &292962437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,12 +1250,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &602312171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1366775145652034685, guid: e49f19a23a1568b4388c988fb9717de8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7636650351164117129}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &668528470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5477529747246334162, guid: f797cca0e56c34ea18e4c867f3d0ec90,
     type: 3}
   m_PrefabInstance: {fileID: 5728212860128579129}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &716776487 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3674423563763922547, guid: e49f19a23a1568b4388c988fb9717de8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7636650351164117129}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &826959151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,7 +1590,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864146904}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
 --- !u!224 &1297796829 stripped
+=======
+--- !u!114 &1050587028 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6986439084854670815, guid: 58a1a8e8eea510a47a830915be0e07c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 556577233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b247e76b9baca7640bef40d589898b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1050587029 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 364130145120974801, guid: 58a1a8e8eea510a47a830915be0e07c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 556577233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243dc65e43f680e479df66ae93c99f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1061761681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3311430545186165020, guid: e49f19a23a1568b4388c988fb9717de8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7636650351164117129}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1241368184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1241368185}
+  - component: {fileID: 1241368186}
+  m_Layer: 5
+  m_Name: Text Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1241368185
+>>>>>>> SierraOne
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9053450092358484203, guid: e49f19a23a1568b4388c988fb9717de8,
     type: 3}
@@ -2057,6 +2161,7 @@ CanvasRenderer:
 --- !u!1001 &1686020599
 PrefabInstance:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 99042936}
@@ -2726,11 +2831,32 @@ RectTransform:
   m_SizeDelta: {x: 169.8, y: 50.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1951429646
+=======
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951429644}
+  m_CullTransparentMesh: 0
+--- !u!1 &1966739380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6462397444118735803, guid: 35be6470ac8709147a4897644a38ee08,
+    type: 3}
+  m_PrefabInstance: {fileID: 1686020599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2055635156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4933248275699296170, guid: e49f19a23a1568b4388c988fb9717de8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7636650351164117129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2055635163
+>>>>>>> SierraOne
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1951429644}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3378,6 +3504,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e49f19a23a1568b4388c988fb9717de8, type: 3}
+=======
+  m_GameObject: {fileID: 2055635156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d3959b64b74fe4885920fc71ddbef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Canvas: {fileID: 99042932}
+  newContact: {fileID: 0}
+  newGroupName: {fileID: 0}
+  discord: {fileID: 1061761681}
+  interest: {fileID: 602312171}
+  mobile: {fileID: 716776487}
+>>>>>>> SierraOne
 --- !u!114 &2099483713 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3264387319790850104, guid: 35be6470ac8709147a4897644a38ee08,
@@ -5915,11 +6055,44 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2239533215302543340, guid: e49f19a23a1568b4388c988fb9717de8,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+=======
+    - target: {fileID: 2491200701817223673, guid: e49f19a23a1568b4388c988fb9717de8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491200701817223673, guid: e49f19a23a1568b4388c988fb9717de8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491200701817223673, guid: e49f19a23a1568b4388c988fb9717de8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491200701817223673, guid: e49f19a23a1568b4388c988fb9717de8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2055635163}
+    - target: {fileID: 2491200701817223673, guid: e49f19a23a1568b4388c988fb9717de8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: submit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491200701817223673, guid: e49f19a23a1568b4388c988fb9717de8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+>>>>>>> SierraOne
     - target: {fileID: 2511703200722200471, guid: e49f19a23a1568b4388c988fb9717de8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
