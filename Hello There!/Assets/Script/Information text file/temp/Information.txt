@@ -4,3 +4,4 @@
 4A Violette badassery
 1505e211-964c-4988-9705-a21193d0619e 6​ 2​ 4​ 5​ 3​ 1​
 ce4533b0-ec2b-439d-9231-929b72912170 6​ 2​ 4​ 5​ 3​ 1​
+c347a6c1-8399-4466-9ff8-fc2d8dd83a00 Name:"bird​" Bday:"none​" Mobile:"123​" Discord:"12​" Interest:"123​" Notes:"12333​"

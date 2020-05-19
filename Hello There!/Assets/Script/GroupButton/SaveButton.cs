@@ -47,7 +47,7 @@ public class SaveButton : MonoBehaviour
         Debug.Log(bday.text);
         Debug.Log(notes.text);
 
-        string txtLine = name.text + " " + interest.text + " " + mobile.text+" "+ bday.text + " " + discord.text + " " + notes.text;
+        string txtLine =  $"Name:\"{name.text}\" Bday:\"{bday.text}\" Mobile:\"{mobile.text}\" Discord:\"{discord.text}\" Interest:\"{interest.text}\" Notes:\"{notes.text}\"";
         Debug.Log(txtLine);
 
         controller.SetIndividual(id,txtLine);

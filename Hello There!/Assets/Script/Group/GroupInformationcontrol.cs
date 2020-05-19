@@ -72,22 +72,17 @@ public class GroupInformationcontrol : MonoBehaviour
             individual.Add(id, information);
         }
     }
+    public Dictionary<string, string>.KeyCollection Keys(){
+        return individual.Keys;
+    }
+
+    public Dictionary<string, string>.ValueCollection Values(){
+        return individual.Values;
+    }
+    
     public void DeleteIndividual(string id)
     {
         individual.Remove(id);
-    }
-    public void SetNewActive()
-    {
-        active = "create new";
-    }
-    public void SetActiveId(string group)
-    {
-        active = group;
-    }
-    public string getActive()
-    {
-        Debug.Log("getActive");
-        return active;
     }
     public string IdGenerator()
     {
