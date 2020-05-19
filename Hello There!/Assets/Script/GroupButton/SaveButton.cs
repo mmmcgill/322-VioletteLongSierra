@@ -12,10 +12,13 @@ public class SaveButton : MonoBehaviour
     public GameObject Canvas;
     private GroupInformationcontrol controller;
     public TextMeshProUGUI  newContact, newGroupName;
-    public TextMeshProUGUI discord, interest, mobile;
+    public TextMeshProUGUI discord, interest, mobile, bday ,name, notes;
+    public GameObject ContactListPage;
+    private contactlist contact;
 
     void Start()
     {
+        contact = ContactListPage.GetComponent<contactlist>();
         controller = Canvas.GetComponent<GroupInformationcontrol>();
     }
 
@@ -41,11 +44,11 @@ public class SaveButton : MonoBehaviour
         Debug.Log(interest.text);
         Debug.Log(mobile.text);
 
-        string txtLine = discord.text + " " + interest.text + " " + mobile.text;
+        string txtLine = discord.text + " " + interest.text + " " + mobile.text+" "+ bday.text + " " + name.text + " " + notes.text;
         Debug.Log(txtLine);
 
         controller.SetIndividual(id,txtLine);
-
+        contact.submitNewCard(txtLine);
 
     }
 }
