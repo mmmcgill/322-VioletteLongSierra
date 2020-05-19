@@ -21,7 +21,8 @@ public class contactlist : MonoBehaviour
         Master = Parent.GetComponent<Transform>();
         foreach (string x in individualList.Keys)
         {
-            instantPrefab(Master, i, individualList[x],x);
+            string[] str = individualList[x].Split(' ');
+            instantPrefab(Master, i, str[0], x);
             i++;
         }
     }
@@ -44,7 +45,7 @@ public class contactlist : MonoBehaviour
 
     public void submitNewCard(string name)
     {
-       i++;
        instantPrefab(Master,i, name, controller.IdGenerator());
+        i++;
     }
 }

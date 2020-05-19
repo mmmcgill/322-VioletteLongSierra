@@ -43,12 +43,15 @@ public class SaveButton : MonoBehaviour
         Debug.Log(discord.text);
         Debug.Log(interest.text);
         Debug.Log(mobile.text);
+        Debug.Log(name.text);
+        Debug.Log(bday.text);
+        Debug.Log(notes.text);
 
-        string txtLine = discord.text + " " + interest.text + " " + mobile.text+" "+ bday.text + " " + name.text + " " + notes.text;
+        string txtLine = name.text + " " + interest.text + " " + mobile.text+" "+ bday.text + " " + discord.text + " " + notes.text;
         Debug.Log(txtLine);
 
         controller.SetIndividual(id,txtLine);
-        contact.submitNewCard(txtLine);
+        contact.submitNewCard(name.text);
 
     }
 }

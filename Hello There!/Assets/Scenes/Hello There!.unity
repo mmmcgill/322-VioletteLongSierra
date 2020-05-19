@@ -1319,6 +1319,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Add Contacts Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 488477640976740960, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001262628164219001, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: Panel
+      value: 
+      objectReference: {fileID: 116979043}
     - target: {fileID: 3487077480837147159, guid: f6437c7802bd39645899555f33f159b9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1424,6 +1434,71 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8329112964526616352, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329112964526616352, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329112964526616352, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329112964526616352, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329112964526616352, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329112965089475197, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329112965089475197, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329112965089475197, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329112965089475197, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329112965482740257, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: ContactListPage
+      value: 
+      objectReference: {fileID: 116979043}
+    - target: {fileID: 8329112965482740257, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 99042932}
+    - target: {fileID: 8329112965710059859, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Bday_text '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329112966232495653, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 99042932}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6437c7802bd39645899555f33f159b9, type: 3}
 --- !u!1 &2065827075774224403 stripped
