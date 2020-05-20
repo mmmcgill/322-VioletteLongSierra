@@ -16,7 +16,7 @@ public class contactlist : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         cardControl = new Dictionary<string, GameObject>();
         controller = Canvas.GetComponent<GroupInformationcontrol>();
         individualList = controller.GetIndividualMap();
@@ -37,7 +37,6 @@ public class contactlist : MonoBehaviour
 
     void instantPrefab(Transform Master, int i, string name, string id)
     {
-        Debug.Log(name);
         GameObject placeholder = Instantiate(Prefabs, new Vector3(Master.position.x + 100, Master.position.y - 30 - i * 50, 0), Quaternion.identity);
         placeholder.transform.SetParent(Master);
         IndividualCard temp = placeholder.GetComponent<IndividualCard>();

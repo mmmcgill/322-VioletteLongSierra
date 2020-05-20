@@ -1,3 +1,5 @@
-0ed8d0c7-8e71-441d-a559-35bd8f6f3fa7 Name:"Long*Le" Bday:"" Mobile:"" Discord:"" Interest:"" Notes:""
-5c400cda-2259-404c-b974-03f47b6cdfe5 Name:"Long*Le*Le*Long" Bday:"" Mobile:"" Discord:"" Interest:"" Notes:"smart*ass"
-faeea988-cc0e-403e-ad06-4ad33f6219cb Name:"I*am*not*atomic" Bday:"special*move" Mobile:"the*one" Discord:"couldn't" Interest:"swimming*video*game" Notes:"Iam*the*super*heros*protecting*galactice,*LFP"
+0ed8d0c7-8e71-441d-a559-35bd8f6f3fa7 Name:"Long*Le" Bday:"" Mobile:"" Discord:"" Interest:"" Notes:"" Reminders:"278"
+5c400cda-2259-404c-b974-03f47b6cdfe5 Name:"Long*Le*Le*Long" Bday:"" Mobile:"" Discord:"" Interest:"" Notes:"smart*ass" Reminders:"1235678"
+faeea988-cc0e-403e-ad06-4ad33f6219cb Name:"I*am*not*atomic" Bday:"special*move" Mobile:"the*one" Discord:"couldn't" Interest:"swimming*video*game" Notes:"Iam*the*super*heros*protecting*galactice,*LFP" Reminders:"5678"
+88abb704-ba70-4181-bf32-1e380ea06040 Name:"wassup" Bday:"hello" Mobile:"" Discord:"" Interest:"" Notes:"" Reminders:"13478"
+62b74c38-2bb5-4e02-ab3b-428e3a11a05c Name:"Long*Le*alarm" Bday:"" Mobile:"" Discord:"" Interest:"" Notes:"" Reminders:"134"
