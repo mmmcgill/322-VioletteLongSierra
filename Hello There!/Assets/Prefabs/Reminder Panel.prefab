@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 8334326129177346788}
   - component: {fileID: 3407702697263232318}
   - component: {fileID: 6546345767823010583}
-  - component: {fileID: 7038235535309137996}
-  - component: {fileID: 5842511226261597130}
+  - component: {fileID: 2102806206}
   m_Layer: 5
   m_Name: Temp Quit button
   m_TagString: Untagged
@@ -38,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 126, y: -365}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 319, y: -1009.1001}
+  m_SizeDelta: {x: 385.4, y: 72.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8334326129177346788
 CanvasRenderer:
@@ -119,8 +118,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3407702697263232318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7038235535309137996
+      m_Calls:
+      - m_Target: {fileID: 2102806206}
+        m_MethodName: End
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2102806206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,23 +139,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3948590222920915911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b247e76b9baca7640bef40d589898b8d, type: 3}
+  m_Script: {fileID: 11500000, guid: 66ffba19d6f5e3b4e9b87df920e49b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 0}
---- !u!114 &5842511226261597130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3948590222920915911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243dc65e43f680e479df66ae93c99f41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Panel: {fileID: 6462397444118735803}
 --- !u!1 &5257385299459365430
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,11 +207,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 6
+    m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -242,7 +238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5561407741269885695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -339,8 +335,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 194, y: 377}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 492, y: 1012}
+  m_SizeDelta: {x: 131.9, y: 131.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8078815653898111735
 CanvasRenderer:
@@ -421,23 +417,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7040965291136702387}
-        m_MethodName: 
+      - m_Target: {fileID: 502756294794750076}
+        m_MethodName: OpenPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7040965291136702387}
-        m_MethodName: 
+      - m_Target: {fileID: 3264387319790850104}
+        m_MethodName: ClosePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -468,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243dc65e43f680e479df66ae93c99f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 0}
+  Panel: {fileID: 6462397444118735803}
 --- !u!1 &7119582716589260126
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,16 +530,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Individual cards
 --- !u!1 &7131973843480691761
@@ -584,8 +580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -120, y: -365}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -294, y: -1013}
+  m_SizeDelta: {x: 427, y: 80.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3942550263218712760
 CanvasRenderer:
@@ -741,14 +737,14 @@ RectTransform:
   m_GameObject: {fileID: 7908497955388689819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5561407741269885695}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -66, y: 377}
+  m_AnchoredPosition: {x: -216.7, y: 1012}
   m_SizeDelta: {x: 771.4, y: 170.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7482634236100236549
