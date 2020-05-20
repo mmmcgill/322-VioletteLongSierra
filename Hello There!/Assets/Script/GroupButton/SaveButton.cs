@@ -44,13 +44,14 @@ public class SaveButton : MonoBehaviour
             //Debug.Log(notes.text);
         } else {
             string information = controller.GetIndividual(command);
-            string[] container = information.Split(' ');
-            name.text = container[0].Substring(6, container[0].Length - 7);
-            bday.text = container[1].Substring(6, container[1].Length - 7);
-            mobile.text = container[2].Substring(8, container[2].Length - 9);
-            discord.text = container[3].Substring(9, container[3].Length - 10);
-            interest.text = container[4].Substring(10, container[4].Length - 11);
-            notes.text = container[5].Substring(7, container[5].Length - 8);      
+            string[] container = information.Split(' ');  
+            Debug.Log(container[0]);      
+            name.text = container[0].Substring(6, container[0].Length - 7).Replace("*", " ");
+            bday.text = container[1].Substring(6, container[1].Length - 7).Replace("*", " ");
+            mobile.text = container[2].Substring(8, container[2].Length - 9).Replace("*", " ");
+            discord.text = container[3].Substring(9, container[3].Length - 10).Replace("*", " ");
+            interest.text = container[4].Substring(10, container[4].Length - 11).Replace("*", " ");
+            notes.text = container[5].Substring(7, container[5].Length - 8).Replace("*", " ");      
         }
     }
 
@@ -61,8 +62,7 @@ public class SaveButton : MonoBehaviour
         foreach(string x in temp.Keys){
             Debug.Log(x);
         }*/
-
-        string txtLine =  $"Name:\"{name.text}\" Bday:\"{bday.text}\" Mobile:\"{mobile.text}\" Discord:\"{discord.text}\" Interest:\"{interest.text}\" Notes:\"{notes.text}\"";
+        string txtLine =  $"Name:\"{name.text.Replace(" ", "*")}\" Bday:\"{bday.text.Replace(" ", "*")}\" Mobile:\"{mobile.text.Replace(" ", "*")}\" Discord:\"{discord.text.Replace(" ", "*")}\" Interest:\"{interest.text.Replace(" ", "*")}\" Notes:\"{notes.text.Replace(" ", "*")}\"";
         if(name.text.Length == 0 && bday.text.Length == 0 && mobile.text.Length == 0 && discord.text.Length == 0 && interest.text.Length == 0 && notes.text.Length == 0 ){
             Debug.Log("user not input anything");
         } else {
@@ -71,8 +71,10 @@ public class SaveButton : MonoBehaviour
                 controller.SetIndividual(tempId, txtLine);
                 contact.submitNewCard(name.text, tempId);
             } else {
+                contact.changeCardText(id, name.text);
                 controller.SetIndividual(id,txtLine);
             }
         }
+        //Debug.Log(txtLine);
     }
 }

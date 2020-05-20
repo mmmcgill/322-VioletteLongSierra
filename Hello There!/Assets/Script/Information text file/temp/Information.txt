@@ -1,2 +1,3 @@
-504cf4be-40f3-4ef4-838a-a13cc8c118b7 Name:"Kevi" Bday:"likes" Mobile:"to" Discord:"eat" Interest:"cake" Notes:"something"
-58cd9426-f3c1-47a0-8244-655c53bb6fc1 Name:"Long Le" Bday:"" Mobile:"" Discord:"" Interest:"" Notes:""
+0ed8d0c7-8e71-441d-a559-35bd8f6f3fa7 Name:"Long*Le" Bday:"" Mobile:"" Discord:"" Interest:"" Notes:""
+5c400cda-2259-404c-b974-03f47b6cdfe5 Name:"Long*Le*Le*Long" Bday:"" Mobile:"" Discord:"" Interest:"" Notes:"smart*ass"
+faeea988-cc0e-403e-ad06-4ad33f6219cb Name:"I*am*not*atomic" Bday:"special*move" Mobile:"the*one" Discord:"couldn't" Interest:"swimming*video*game" Notes:"Iam*the*super*heros*protecting*galactice,*LFP"
