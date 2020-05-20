@@ -1,3 +1,2 @@
-ed9dbd8b-65c1-45fa-8e8c-69d5a3b1d950 Name:"hello" Bday:"" Mobile:"1235" Discord:"" Interest:"" Notes:""
-66853404-cbc3-4fe3-a5d1-83ccfc1b518d Name:"hello" Bday:"" Mobile:"324124" Discord:"" Interest:"" Notes:""
-fb24804e-f006-4a14-9f57-01c4e0254f5b Name:"Sasuke" Bday:"loves" Mobile:"mounching" Discord:"naruto" Interest:"and" Notes:"sakura"
+504cf4be-40f3-4ef4-838a-a13cc8c118b7 Name:"Kevi" Bday:"likes" Mobile:"to" Discord:"eat" Interest:"cake" Notes:"something"
+58cd9426-f3c1-47a0-8244-655c53bb6fc1 Name:"Long Le" Bday:"" Mobile:"" Discord:"" Interest:"" Notes:""
