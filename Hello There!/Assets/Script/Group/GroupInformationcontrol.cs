@@ -17,6 +17,7 @@ public class GroupInformationcontrol : MonoBehaviour
     private string pathIndividual = @"Assets/Script/Information text file/temp/Individual.txt";
     void Start()
     {
+        PlayerPrefs.DeleteAll();
         if (!File.Exists(path2))
         {
             using (FileStream fs = File.Create(path2)) ;
@@ -66,7 +67,7 @@ public class GroupInformationcontrol : MonoBehaviour
     }
     public void SetIndividual(string id, string information)
     {
-        if (individual.ContainsKey(id)) Debug.Log("has key");
+        if (individual.ContainsKey(id)) individual[id] = information;
         else
         {
             individual.Add(id, information);
@@ -79,7 +80,7 @@ public class GroupInformationcontrol : MonoBehaviour
     public Dictionary<string, string>.ValueCollection Values(){
         return individual.Values;
     }
-    
+
     public void DeleteIndividual(string id)
     {
         individual.Remove(id);
