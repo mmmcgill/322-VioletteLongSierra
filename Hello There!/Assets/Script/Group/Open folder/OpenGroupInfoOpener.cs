@@ -36,12 +36,12 @@ public class OpenGroupInfoOpener : MonoBehaviour
 
     public void createNew(){
         //render new info panel if addNew is true;
-        controller.SetNewActive();
+        //controller.SetNewActive();
         toggle.GroupDetailToggle();
     }
 
     public void takeExist(){
-        controller.SetActiveId(this.group);
+        //controller.SetActiveId(this.group);
         toggle.GroupDetailToggle();
         //render existing info panel if addNew is false;
     }

@@ -7,7 +7,7 @@ public class contactlist : MonoBehaviour
 {
     public GameObject Canvas;
     public GameObject Prefabs;
-    public GameObject Parent;
+    public GameObject Parent, AddContactsPanel, ContactListPage;
     private GroupInformationcontrol controller;
     private Dictionary<string, string> individualList;
     private int i = 0;
@@ -22,7 +22,7 @@ public class contactlist : MonoBehaviour
         foreach (string x in individualList.Keys)
         {
             string[] str = individualList[x].Split(' ');
-            instantPrefab(Master, i, str[0], x);
+            instantPrefab(Master, i, str[0].Substring(6, str[0].Length - 7), x);
             i++;
         }
     }
@@ -41,11 +41,12 @@ public class contactlist : MonoBehaviour
         placeholder.transform.SetParent(Master);
         IndividualCard temp = placeholder.GetComponent<IndividualCard>();
         temp.SetID(id);
+        temp.SetPanel(AddContactsPanel, ContactListPage);
     }
 
-    public void submitNewCard(string name)
+    public void submitNewCard(string name, string id)
     {
-       instantPrefab(Master,i, name, controller.IdGenerator());
+       instantPrefab(Master,i, name, id);
         i++;
     }
 }
