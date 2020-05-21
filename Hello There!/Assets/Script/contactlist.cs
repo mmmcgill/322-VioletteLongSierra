@@ -11,12 +11,47 @@ public class contactlist : MonoBehaviour
     private Dictionary<string, GameObject> cardControl;
     private GroupInformationcontrol controller;
     private Dictionary<string, string> individualList;
-    private int i = 0;
+    private int i;
     private Transform Master;
 
     // Start is called before the first frame update
-    void Start()
-    {   
+    private void OnEnable(){
+        Debug.Log("contactList rerender");
+        i = 0;
+        deleteAllCard();
+        createNewCard();
+    }
+
+    void instantPrefab(Transform Master, int i, string name, string id)
+    {
+        GameObject placeholder = Instantiate(Prefabs, new Vector3(Master.position.x + 100, Master.position.y - 30 - i * 50, 0), Quaternion.identity);
+        cardControl.Add(id, placeholder);
+        placeholder.transform.SetParent(Master);
+        IndividualCard temp = placeholder.GetComponent<IndividualCard>();
+        temp.SetID(id);
+        temp.SetPanel(AddContactsPanel, ContactListPage);
+        changeCardText(id, name);
+    }
+
+    public void submitNewCard(string name, string id)
+    {
+       instantPrefab(Master,i, name, id);
+       i++;
+    }
+
+    public void changeCardText(string id, string text){
+        TextMeshProUGUI TMP = cardControl[id].GetComponent<TextMeshProUGUI>();
+        TMP.text = text;
+    }
+    public void deleteAllCard(){
+        if(cardControl != null){
+            foreach(var x in cardControl.Keys){
+                Destroy(cardControl[x]);
+            }
+        }
+    }
+
+    public void createNewCard(){
         cardControl = new Dictionary<string, GameObject>();
         controller = Canvas.GetComponent<GroupInformationcontrol>();
         individualList = controller.GetIndividualMap();
@@ -28,32 +63,10 @@ public class contactlist : MonoBehaviour
             i++;
         }
     }
-
-    // Update is called once per
-    void Update()
-    {
-
-    }
-
-    void instantPrefab(Transform Master, int i, string name, string id)
-    {
-        GameObject placeholder = Instantiate(Prefabs, new Vector3(Master.position.x + 100, Master.position.y - 30 - i * 50, 0), Quaternion.identity);
-        placeholder.transform.SetParent(Master);
-        IndividualCard temp = placeholder.GetComponent<IndividualCard>();
-        temp.SetID(id);
-        temp.SetPanel(AddContactsPanel, ContactListPage);
-        cardControl.Add(id, placeholder);
-        changeCardText(id, name);
-    }
-
-    public void submitNewCard(string name, string id)
-    {
-       instantPrefab(Master,i, name, id);
-        i++;
-    }
-
-    public void changeCardText(string id, string text){
-        TextMeshProUGUI TMP = cardControl[id].GetComponent<TextMeshProUGUI>();
-        TMP.text = text;
+    
+    public void RemoveCard(string id){
+        Debug.Log("delete click");
+        Destroy(cardControl[id]);
+        controller.DeleteIndividual(id);
     }
 }
