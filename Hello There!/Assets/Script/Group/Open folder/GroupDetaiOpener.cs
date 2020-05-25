@@ -23,7 +23,7 @@ public class GroupDetaiOpener : MonoBehaviour
         //Debug.Log("start");
     }
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
         Contact = contact.GetComponent<TMP_InputField>();
         GroupName = groupName.GetComponent<TMP_InputField>();
@@ -36,7 +36,7 @@ public class GroupDetaiOpener : MonoBehaviour
         } else {
             renderInformation(ID);
         }
-    }
+    }*/
     // Update is called once per frame
     
     void Update()

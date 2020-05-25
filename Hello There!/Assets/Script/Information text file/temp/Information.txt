@@ -1,6 +1,2 @@
-1A Long Ramen 
-2A Sierra games
-3A Max calendar
-4A Violette badassery
-1505e211-964c-4988-9705-a21193d0619e 6​ 2​ 4​ 5​ 3​ 1​
-ce4533b0-ec2b-439d-9231-929b72912170 6​ 2​ 4​ 5​ 3​ 1​
+991b3bf2-4202-4597-bc8b-8e85eb411696 Name:"ewfew" Bday:"fewfwe" Mobile:"fewf" Discord:"ewfewf" Interest:"ewf" Notes:"ewfwe" Reminders:""
+cc9ed357-3f26-4ed6-894b-b15dc5024ff3 Name:"ewfewf" Bday:"ewfewf" Mobile:"wefwe" Discord:"fwef" Interest:"ewfewf" Notes:"ewfwe" Reminders:""

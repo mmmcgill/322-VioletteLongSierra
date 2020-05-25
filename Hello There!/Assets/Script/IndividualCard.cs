@@ -5,6 +5,7 @@ using UnityEngine;
 public class IndividualCard : MonoBehaviour
 {
     private string id;
+    private GameObject AddContactPanel, ContactListPage;
 
     // Start is called before the first frame update
     void Start()
@@ -26,5 +27,13 @@ public class IndividualCard : MonoBehaviour
     public void Onclick()
     {
         PlayerPrefs.SetString("id", id);
+        Debug.Log(id);
+        AddContactPanel.SetActive(true);
+        ContactListPage.SetActive(false);
+
+    }
+    public void SetPanel(GameObject AddContactPanel, GameObject ContactListPage){
+        this.AddContactPanel = AddContactPanel;
+        this.ContactListPage = ContactListPage;
     }
 }

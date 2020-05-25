@@ -22,6 +22,6 @@ public class AddContactPanel : MonoBehaviour
     void OnEnable()
     {
         string id = PlayerPrefs.GetString("id");
-        string information = controller.GetIndividual(id);
+        //string information = controller.GetIndividual(id);
     }
 }
