@@ -21,6 +21,7 @@ public class SaveButton : MonoBehaviour
     private string command;
     void Start()
     {
+        Debug.Log(Application.persistentDataPath);
         contact = ContactListPage.GetComponent<contactlist>();
         controller = Canvas.GetComponent<GroupInformationcontrol>();
     }
