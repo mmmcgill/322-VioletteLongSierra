@@ -7,7 +7,7 @@ public class Reminderscript : MonoBehaviour
 {
     public GameObject Canvas;
     public GameObject Prefabs;
-    public GameObject Parent, AddContactsPanel, ContactListPage;
+    public GameObject Parent, AddContactsPanel, ContactListPage, ReminderPanel;
     private Dictionary<string, GameObject> cardControl;
     private GroupInformationcontrol controller;
     private Dictionary<string, string> individualList;
@@ -35,7 +35,7 @@ public class Reminderscript : MonoBehaviour
         placeholder.transform.SetParent(Master);
         IndividualCard temp = placeholder.GetComponent<IndividualCard>();
         temp.SetID(id);
-        temp.SetPanel(AddContactsPanel, ContactListPage);
+        temp.SetPanel(AddContactsPanel, ReminderPanel );
         changeCardText(id, name);
     }
 
@@ -69,11 +69,13 @@ public class Reminderscript : MonoBehaviour
         Master = Parent.GetComponent<Transform>();
         foreach (string x in individualList.Keys)
         {
+            
             string[] str = individualList[x].Split(' ');
+            Debug.Log(str[6]);
             if (str[6].Contains(d))
             {
                 instantPrefab(Master, i, str[0].Substring(6, str[0].Length - 7).Replace("*", " "), x);
-           
+                Debug.Log("if statement");
             }
              i++;
         }
