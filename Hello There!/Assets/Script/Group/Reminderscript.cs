@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class Reminderscript : MonoBehaviour
 {
@@ -13,17 +14,20 @@ public class Reminderscript : MonoBehaviour
     private Dictionary<string, string> individualList;
     private int i;
     private Transform Master;
-    private string d = "1";
+    private DateTime dateValue = DateTime.Now;
+    private string d = "1";//(int)dateValue.DayOfWeek;
+    private int day = ((int)DateTime.Now.DayOfWeek==0)?7:(int)DateTime.Now.DayOfWeek;
+    
 
-    // Start is called before the first frame update
-    private void OnEnable()
+// Start is called before the first frame update
+private void OnEnable()
     {
         Debug.Log("contactList rerender");
         i = 0;
         deleteAllCard();
         createNewCard();
 
-        d = "1";//monday
+        //d = "1";//monday
         //d=day of week
 
     }
@@ -67,17 +71,19 @@ public class Reminderscript : MonoBehaviour
         controller = Canvas.GetComponent<GroupInformationcontrol>();
         individualList = controller.GetIndividualMap();
         Master = Parent.GetComponent<Transform>();
+        string daynum = day + "";
         foreach (string x in individualList.Keys)
         {
             
             string[] str = individualList[x].Split(' ');
             Debug.Log(str[6]);
-            if (str[6].Contains(d))
+            if (str[6].Contains(daynum))
             {
                 instantPrefab(Master, i, str[0].Substring(6, str[0].Length - 7).Replace("*", " "), x);
-                Debug.Log("if statement");
+                Debug.Log(day);
+
             }
-             i++;
+            i++;
         }
     }
 
