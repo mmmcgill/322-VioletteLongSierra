@@ -853,7 +853,7 @@ PrefabInstance:
     - target: {fileID: 7358339815699997852, guid: 58a1a8e8eea510a47a830915be0e07c6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8829977760632005351, guid: 58a1a8e8eea510a47a830915be0e07c6,
         type: 3}
@@ -1918,6 +1918,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554059179}
   m_CullTransparentMesh: 0
+--- !u!1 &1603915024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1854773938, guid: 58a1a8e8eea510a47a830915be0e07c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 556577233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1686020599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2078,7 +2084,7 @@ PrefabInstance:
     - target: {fileID: 6462397444118735803, guid: 35be6470ac8709147a4897644a38ee08,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6517823869581215503, guid: 35be6470ac8709147a4897644a38ee08,
         type: 3}
@@ -2478,6 +2484,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1686020599}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1966739383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966739380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2b5d3cb1bbf0c408c626646cd83652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Canvas: {fileID: 99042932}
+  Prefabs: {fileID: 9138253933966197286, guid: a82a952710e54044e84645a1b6c4fc5c, type: 3}
+  Parent: {fileID: 1603915024}
+  AddContactsPanel: {fileID: 2065827075774224403}
+  ContactListPage: {fileID: 1966739380}
 --- !u!224 &1989041452 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 738104356305806335, guid: f6437c7802bd39645899555f33f159b9,

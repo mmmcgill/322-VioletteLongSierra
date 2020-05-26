@@ -1,30 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Reminderscript : MonoBehaviour
 {
     public GameObject Canvas;
-
+    public GameObject Prefabs;
+    public GameObject Parent, AddContactsPanel, ContactListPage;
+    private Dictionary<string, GameObject> cardControl;
     private GroupInformationcontrol controller;
+    private Dictionary<string, string> individualList;
+    private int i;
+    private Transform Master;
+    private string d = "1";
+
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
+        Debug.Log("contactList rerender");
+        i = 0;
+        deleteAllCard();
+        createNewCard();
 
-        controller = Canvas.GetComponent<GroupInformationcontrol>();
-        foreach(var item in controller.Values())
-        {
-            string[] container = item.Split(' ');
-            Debug.Log(container[0].Substring(6, container[0].Length - 7).Replace("*", " "));
-            Debug.Log(container[6]);
-            Debug.Log(item);
-        }
-    }
+        d = "1";//monday
+        //d=day of week
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void instantPrefab(Transform Master, int i, string name, string id)
@@ -38,10 +39,26 @@ public class Reminderscript : MonoBehaviour
         changeCardText(id, name);
     }
 
+    public void submitNewCard(string name, string id)
+    {
+        instantPrefab(Master, i, name, id);
+        i++;
+    }
+
     public void changeCardText(string id, string text)
     {
         TextMeshProUGUI TMP = cardControl[id].GetComponent<TextMeshProUGUI>();
         TMP.text = text;
+    }
+    public void deleteAllCard()
+    {
+        if (cardControl != null)
+        {
+            foreach (var x in cardControl.Keys)
+            {
+                Destroy(cardControl[x]);
+            }
+        }
     }
 
     public void createNewCard()
@@ -53,8 +70,19 @@ public class Reminderscript : MonoBehaviour
         foreach (string x in individualList.Keys)
         {
             string[] str = individualList[x].Split(' ');
-            instantPrefab(Master, i, str[0].Substring(6, str[0].Length - 7).Replace("*", " "), x);
-            i++;
+            if (str[6].Contains(d))
+            {
+                instantPrefab(Master, i, str[0].Substring(6, str[0].Length - 7).Replace("*", " "), x);
+           
+            }
+             i++;
         }
+    }
+
+    public void RemoveCard(string id)
+    {
+        Debug.Log("delete click");
+        Destroy(cardControl[id]);
+        controller.DeleteIndividual(id);
     }
 }
