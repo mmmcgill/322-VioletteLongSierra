@@ -5,7 +5,7 @@ using Unity.Notifications.Android;
 
 public class NotificationManager : MonoBehaviour
 {
-    private void Start()
+    public void AddNotify()
     {
         var c = new AndroidNotificationChannel()
         {
@@ -25,4 +25,6 @@ public class NotificationManager : MonoBehaviour
         AndroidNotificationCenter.SendNotification(notification, "channel_id");
     }
 }
+  
+
 
