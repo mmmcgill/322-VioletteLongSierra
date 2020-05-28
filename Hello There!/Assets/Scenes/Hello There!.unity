@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 99042937}
   - component: {fileID: 99042934}
   - component: {fileID: 99042933}
+  - component: {fileID: 99042938}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -235,6 +236,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2635e96a6fe61849bdb28e19839f273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &99042938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99042932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc931d943d07406b92ee5e5cfb79672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &102016550
@@ -1131,6 +1144,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5728212860128579129}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &902933429 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4026393129717931344, guid: f6437c7802bd39645899555f33f159b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1903933113156479603}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &902933430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902933429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc931d943d07406b92ee5e5cfb79672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &928539667 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3970736070706341691, guid: f6437c7802bd39645899555f33f159b9,
@@ -2126,7 +2157,7 @@ PrefabInstance:
     - target: {fileID: 6462397444118735803, guid: 35be6470ac8709147a4897644a38ee08,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6517823869581215503, guid: 35be6470ac8709147a4897644a38ee08,
         type: 3}
@@ -2999,7 +3030,7 @@ PrefabInstance:
     - target: {fileID: 488477640976740960, guid: f6437c7802bd39645899555f33f159b9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 738104356305806335, guid: f6437c7802bd39645899555f33f159b9,
         type: 3}
@@ -3355,6 +3386,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -695
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837916130637808387, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837916130637808387, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837916130637808387, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837916130637808387, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 902933430}
+    - target: {fileID: 5837916130637808387, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: AddNotify
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837916130637808387, guid: f6437c7802bd39645899555f33f159b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5858524354458312045, guid: f6437c7802bd39645899555f33f159b9,
         type: 3}
