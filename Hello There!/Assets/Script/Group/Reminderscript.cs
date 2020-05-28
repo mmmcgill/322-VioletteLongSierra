@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using Unity.Notifications.Android;
 
 public class Reminderscript : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Reminderscript : MonoBehaviour
     private DateTime dateValue = DateTime.Now;
     private string d = "1";//(int)dateValue.DayOfWeek;
     private int day = ((int)DateTime.Now.DayOfWeek==0)?7:(int)DateTime.Now.DayOfWeek;
+    
     
 
 // Start is called before the first frame update
